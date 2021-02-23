@@ -13,7 +13,8 @@
         <h1>Employee's page!</h1>
         </br>
 
-        <?php if ($action == "getEmployee" && (!isset($employee) || sizeof($employee) == 0)) {
+        <?php
+        if ($action == "getEmployee" && (!isset($employee) || !$employee || sizeof($employee) == 0)) {
             echo "<p>The employee does not exists!</p>";
         } else if (isset($error)) {
             echo "<p>$error</p>";

@@ -13,7 +13,8 @@
         <h1>Hobbie's page!</h1>
         </br>
 
-        <?php if ($action == "gethobbie" && (!isset($hobbie) || sizeof($hobbie) == 0)) {
+        <?php
+        if ($action == "getHobbie" && (!isset($hobbie) || !$hobbie || sizeof($hobbie) == 0)) {
             echo "<p>The hobbie does not exists!</p>";
         } else if (isset($error)) {
             echo "<p>$error</p>";
